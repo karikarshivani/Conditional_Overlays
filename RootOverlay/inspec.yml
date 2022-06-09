@@ -1,0 +1,56 @@
+name: base-microsoft-sql-server-2017-cis-overlay
+title: base-microsoft-sql-server-2017-cis-overlay
+maintainer: MITRE SAF
+copyright: MITRE SAF
+copyright_email: saf@groups.mitre.org
+license: Apache-2.0
+summary: "An InSpec Overlay Profile for CMS ARS 3.1 High to validate the Microsoft SQL Server 2017 CIS Benchmark"
+version: 1.2.0
+inspec_version: ">= 4.0"
+
+
+<% if ENV['BASELINE'] == 'Moderate' %>
+depends:
+- name: cms-ars-3.1-moderate-microsoft-sql-server-2017-cis-overlay
+  url: https://github.com/CMSgov/cms-ars-3.1-moderate-microsoft-sql-server-2017-cis-overlay/archive/v1.2.0.tar.gz
+<% end %>
+
+<% if ENV['BASELINE'] == 'Low' %>
+depends:
+- name: cms-ars-3.1-low-microsoft-sql-server-2017-cis-overlay
+  url: https://github.com/CMSgov/cms-ars-3.1-low-microsoft-sql-server-2017-cis-overlay/archive/v1.2.0.tar.gz
+<% end %>
+
+<% if ENV['BASELINE'] == 'High' %>
+depends:
+- name: cms-ars-3.1-high-microsoft-sql-server-2017-cis-overlay
+  url: https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2017-cis-overlay/archive/v1.2.0.tar.gz
+<% end %>
+
+inputs:
+  - name: user
+    description: 'The username MSSQL DB Server'
+    required: true
+    sensitive: true
+
+  - name: password
+    description: 'The password MSSQL DB Server'
+    required: true
+    sensitive: true
+
+  - name: host
+    description: 'The hostname MSSQL DB Server'
+    required: true
+    sensitive: true
+
+  - name: instance
+    description: 'The instance name MSSQL DB Server'
+    required: true
+    sensitive: true
+
+  - name: port
+    description: 'The port used for MSSQL DB Server'
+    type: numeric
+    value: 1433
+    required: true
+    sensitive: true
