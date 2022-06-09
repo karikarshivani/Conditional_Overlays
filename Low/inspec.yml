@@ -1,5 +1,5 @@
-name: cms-ars-3.1-low-microsoft-sql-server-2017-cis-overlay
-title: cms-ars-3.1-low-microsoft-sql-server-2017-cis-overlay
+name: low-overlay
+title: low-overlay
 maintainer: MITRE SAF
 copyright: MITRE SAF
 copyright_email: saf@groups.mitre.org
