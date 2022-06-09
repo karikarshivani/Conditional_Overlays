@@ -23,7 +23,7 @@ depends:
 
 <% if ENV['BASELINE'] == 'High' %>
 depends:
-- name: cms-ars-3.1-high-microsoft-sql-server-2017-cis-overlay
+- name: high-overlay
   url: https://github.com/CMSgov/cms-ars-3.1-high-microsoft-sql-server-2017-cis-overlay/archive/v1.2.0.tar.gz
 <% end %>
 
