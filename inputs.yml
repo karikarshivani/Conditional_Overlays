@@ -1,7 +1,0 @@
-user: 'sa'
-password: 'Vagrant42'
-host: 'WIN-M0DON71OD11'
-instance: 'WINGUSZ-L7DS79Q'
-approved_sql_version: 14.0.3420.9
-excluded_dbs: []
-encryption_disabled_dbs: ['tempdb']
