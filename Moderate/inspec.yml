@@ -1,18 +1,20 @@
-name: cms-ars-3.1-moderate-aws-rds-microsoft-sql-server-2017-cis-overlay
-title: cms-ars-3.1-moderate-aws-rds-microsoft-sql-server-2017-cis-overlay
-maintainer: MITRE SAF
-copyright: MITRE SAF
-copyright_email: saf@groups.mitre.org
-license: Apache-2.0
-summary: "An InSpec Overlay Profile for CMS ARS 3.1 Moderate to validate the Microsoft SQL Server 2017 CIS Benchmark"
+name: moderate-overlay
+title: moderate-overlay
 version: 1.2.0
 inspec_version: ">= 4.0"
 
 depends:
-- name: microsoft-sql-server-2017-cis-baseline
-  url: https://github.com/mitre/microsoft-sql-server-2017-cis-baseline/archive/v1.2.0.tar.gz
+- name: high-overlay
+  git: https://github.com/karikarshivani/Conditional_Overlays/
+  branch: main
+  relative_path: ./High
 
 inputs:
+  - name: test-input
+    type: String
+    value: "ModerateOverlay"
+    profile: high-overlay
+
   - name: user
     description: 'The username MSSQL DB Server'
     required: true

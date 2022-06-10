@@ -4,10 +4,10 @@ version: 1.2.0
 inspec_version: ">= 4.0"
 
 depends:
-- name: baseline-profile
+- name: moderate-overlay
   git: https://github.com/karikarshivani/Conditional_Overlays/
   branch: main
-  relative_path: ./Baseline
+  relative_path: ./Moderate
 
 inputs:
   - name: test-input

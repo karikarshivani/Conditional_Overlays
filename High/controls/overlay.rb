@@ -1,4 +1,4 @@
-include_controls "microsoft-sql-server-2017-cis-baseline" do
+include_controls "baseline-profile" do
 
   control "microsoft-sql-server-2017-cis-2.3" do
     impact 0.0

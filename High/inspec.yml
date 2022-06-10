@@ -4,10 +4,17 @@ version: 1.2.0
 inspec_version: ">= 4.0"
 
 depends:
-- name: microsoft-sql-server-2017-cis-baseline
-  url: https://github.com/karikarshivani/Conditional_Overlays/archive/main/Baseline.tar.gz
+- name: baseline-profile
+  git: https://github.com/karikarshivani/Conditional_Overlays/
+  branch: main
+  relative_path: ./Baseline
 
 inputs:
+  - name: test-input
+    type: String
+    value: "HighOverlay"
+    profile: baseline-profile
+
   - name: user
     description: 'The username MSSQL DB Server'
     required: true
