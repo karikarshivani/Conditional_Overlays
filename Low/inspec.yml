@@ -13,7 +13,7 @@ inputs:
   - name: test-input
     type: String
     value: "LowOverlay"
-    profile: baseline-profile
+    profile: moderate-overlay
 
   - name: user
     description: 'The username MSSQL DB Server'
