@@ -1,19 +1,20 @@
 name: low-overlay
 title: low-overlay
-maintainer: MITRE SAF
-copyright: MITRE SAF
-copyright_email: saf@groups.mitre.org
-license: Apache-2.0
-summary: "An InSpec Overlay Profile for CMS ARS 3.1 Low to validate the Microsoft SQL Server 2017 CIS Benchmark"
 version: 1.2.0
 inspec_version: ">= 4.0"
 
 depends:
 - name: baseline-profile
-  #url: https://github.com/karikarshivani/Conditional_Overlays/archive/main/Baseline.tar.gz
-  path: ../Baseline
+  git: https://github.com/karikarshivani/Conditional_Overlays/
+  branch: main
+  relative_path: ./Baseline
 
 inputs:
+  - name: test-input
+    type: String
+    value: "LowOverlay"
+    profile: baseline-profile
+
   - name: user
     description: 'The username MSSQL DB Server'
     required: true

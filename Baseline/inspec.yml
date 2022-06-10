@@ -4,6 +4,10 @@ version: 1.2.1
 inspec_version: ">= 4.0"
 
 inputs:
+  - name: test-input
+    type: String
+    value: "Baseline"
+
   - name: user
     description: 'The username MSSQL DB Server'
     required: true
