@@ -1,10 +1,10 @@
 # encoding: UTF-8
 
-control "microsoft-sql-server-2017-cis-2.2" do
-  title "Baseline skip"
-  impact 0.0
+control "cis-2" do
+  title "Baseline env var"
+  impact 0.5
   
-  describe "Skipped control in Baseline" do
-    skip "Skipped"
+  describe os_env('BASELINE') do
+    it { should_not eq "none" }
   end
 end
