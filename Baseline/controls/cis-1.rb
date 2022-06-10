@@ -4,5 +4,5 @@ control "cis-1" do
   title "Print the Profile Name"
   impact 0.5
   
-  puts "===============\nINPUT: " + input("test-input") + "\n==============="
+  puts "======================\nINPUT: " + input("test-input") + "\n======================"
 end
